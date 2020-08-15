@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Adriana Soler , Developer, Art Director, Copywriter">
+    <meta name="author" content="Adriana Soler">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <meta property="og:title" content="Adriana Soler">
+    <meta property="og:image" content="../assets/dist/images/water.png">
+    <meta property="og:description" content="Adriana Soler | Developer | Art Director | Developer">
+    <meta property="og:url" content="https://github.com/asoler000/myportfolio.io">
+    <title>Adriana Soler | Developer | Art Director | Copywriter </title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbars/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/grid/">
+
+    <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../assets/dist/css/form.css" >
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .form-group {
+    margin: 1rem;
+}
+.panel{
+  padding-bottom:2em;
+}
+
+ 
+#holographic {
+
+     background-image: linear-gradient(
+     to right, 
+rgb(194, 255, 182),
+rgb(255, 163, 182),
+rgb(221, 169, 255),
+rgb(162, 209, 255)
+);
+background-size: 200%;
+}
+
+.holographic {
+
+background-image: linear-gradient(
+to right, 
+rgb(194, 255, 182),
+rgb(255, 163, 182),
+rgb(221, 169, 255),
+rgb(162, 209, 255)
+);
+background-size: 200%;
+}
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="navbar.css" rel="stylesheet">
+  </head>
+  <body>
+  
+
+    <nav class="navbar navbar-expand-sm " id="holographic" onmousemove="handleMouseMove(event)">
+  <a class="navbar-brand" href="index.html"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExample03">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="About.html">About<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="Contact.html">Contact <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Portfolio.html">Portfolio<span class="sr-only"></span></a>
+      </li>
+    </ul>
+    </div>
+</nav>
+
+
+<!-- Form Started -->
+<div class="container themed-container">
+<div class="container form-top " >
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
+      <div class="panel panel-danger">
+        <div class="panel-body">
+          <form id="reused_form">
+             <div class="form-group">
+               <label><i class="fa fa-user" aria-hidden="true"></i> Name</label>
+               <input type="text" name="name" class="form-control" placeholder="Enter Name">
+             </div>
+             <div class="form-group">
+               <label><i class="fa fa-envelope" aria-hidden="true"></i> Email</label>
+               <input type="email" name="email" class="form-control" placeholder="Enter Email">
+             </div>
+             <div class="form-group">
+               <label><i class="fa fa-comment" aria-hidden="true"></i> Message</label>
+               <textarea rows="3" name="message" class="form-control" placeholder="Type Your Message"></textarea>
+             </div>
+
+
+             <div class="form-group">
+               <button class="btn btn-raised btn-block holographic">Holla →</button>
+             </div>
+          </form>
+          <div id="error_message" style="width:100%; height:100%; display:none; ">
+          <h4>Error</h4>
+          Sorry there was an error sending your form.
+          </div>
+          <div id="success_message" style="width:100%; height:100%; display:none; ">
+          <h2>Success! Your Message was Sent Successfully.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Form Ended -->
+</div>
+</body>
+<!-- this is the footer -->
+<footer class="footer mt-auto py-3">
+  <div class="container">
+  <small><span class="text-muted" >© Copyright 2020 Adriana Soler | asoler000@gmail.com </span></small>
+  </div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+<!-- holographic script -->
+<script>
+  window.addEventListener("deviceorientation", handleOrientation, true);
+        function handleOrientation(event) {
+          const z = event.alpha; // rotation degrees from 0 to 360
+  
+          const holographicElement = document.getElementById("holographic");
+          holographicElement.style.backgroundPosition =
+            Math.min(Math.abs(z), 100) + "%";
+  }
+  
+    </script>
+  
+    <script>
+  
+  const holographicElement = document.getElementById("holographic");
+  
+  function updateHolographicBackground(value) {
+    const percentage = value * 100;
+    holographicElement.style.backgroundPosition = percentage + "%";
+  }
+  
+  function handleMouseMove(event) {
+    const x = event.clientX;
+    const width = document.documentElement.clientWidth;
+    const value = x / width;
+    updateHolographicBackground(value);
+  }
+  
+  function handleDeviceOrientation(event) {
+    const z = Math.abs(event.alpha); // rotation degrees from 0 to 360
+    const value = z / 360;
+    updateHolographicBackground(value);
+  }
+  
+  window.addEventListener("deviceorientation", handleDeviceOrientation, true);
+  
+    </script>
+
+<!-- form script -->
+<script>
+  $(function()
+  {
+      function after_form_submitted(data)
+      {
+          if(data.result == 'success')
+          {
+              $('form#reused_form').hide();
+              $('#success_message').show();
+              $('#error_message').hide();
+          }
+          else
+          {
+              $('#error_message').append('<ul></ul>');
+  
+              jQuery.each(data.errors,function(key,val)
+              {
+                  $('#error_message ul').append('<li>'+key+':'+val+'</li>');
+              });
+              $('#success_message').hide();
+              $('#error_message').show();
+  
+              //reverse the response on the button
+              $('button[type="button"]', $form).each(function()
+              {
+                  $btn = $(this);
+                  label = $btn.prop('orig_label');
+                  if(label)
+                  {
+                      $btn.prop('type','submit' );
+                      $btn.text(label);
+                      $btn.prop('orig_label','');
+                  }
+              });
+  
+          }//else
+      }
+  
+    $('#reused_form').submit(function(e)
+        {
+          e.preventDefault();
+  
+          $form = $(this);
+          //show some response on the button
+          $('button[type="submit"]', $form).each(function()
+          {
+              $btn = $(this);
+              $btn.prop('type','button' );
+              $btn.prop('orig_label',$btn.text());
+              $btn.text('Sending ...');
+          });
+  
+  
+                      $.ajax({
+                  type: "POST",
+                  url: '../assets/dist/handler.php',
+                  data: $form.serialize(),
+                  success: after_form_submitted,
+                  dataType: 'json'
+              });
+  
+        });
+  });
+  </script>
+      </html>
