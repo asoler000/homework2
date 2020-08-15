@@ -48,14 +48,14 @@
  }
       #holographic {
 
-background-image: linear-gradient(
-to right,
-rgb(194, 255, 182),
-rgb(255, 163, 182),
-rgb(221, 169, 255),
-rgb(162, 209, 255)
-);
-background-size: 200%;
+    background-image: linear-gradient(
+        to right,
+        rgb(194, 255, 182),
+        rgb(255, 163, 182),
+        rgb(221, 169, 255),
+        rgb(162, 209, 255)
+    );
+    background-size: 200%;
 }
 .holographic {
 
@@ -81,7 +81,7 @@ background-size: 200%;
   <body>
   
 <!-- this is the menu -->
-<nav class="navbar navbar-expand navbar-dark bg-dark holographic" onmousemove="handleMouseMove(event)">
+<nav class="navbar navbar-expand navbar-dark bg-dark" id="holographic" onmousemove="handleMouseMove(event)">
   <a class="navbar-brand" href="#"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -121,7 +121,7 @@ background-size: 200%;
           <div class="card mb-4 shadow-sm">
             <img class="img-fluid" src="./assets/dist/images/artDirection.jpg"
             alt="art direction"/> 
-            <div class="card-body">
+            <div class="card-body holographic">
               <p class="card-text holographic" Style="font-size:2rem ;font-weight:lighter; color:gray">ART DIRECTION</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
@@ -137,7 +137,7 @@ background-size: 200%;
           <div class="card mb-4 shadow-sm">
             <img class="img-fluid" src="./assets/dist/images/copywriting-telefone.jpg"
             alt="Copy Writing"/> 
-            <div class="card-body">
+            <div class="card-body holographic">
               <p class="card-text holographic" Style="font-size:2rem ;font-weight:lighter; color:gray">COPYWRITING</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
@@ -153,7 +153,7 @@ background-size: 200%;
           <div class="card mb-4 shadow-sm">
             <img class="img-fluid" src="./assets/dist/images/website-ozzie---Copy.png"
             alt="Development"/> 
-            <div class="card-body">
+            <div class="card-body holographic">
               <p class="card-text holographic" Style="font-size:2rem ;font-weight:lighter; color:gray">DEVELOPMENT</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
@@ -195,42 +195,28 @@ background-size: 200%;
 
        <!-- scripts for holographic menu -->
        <script>
-        window.addEventListener("deviceorientation", handleOrientation, true);
-              function handleOrientation(event) {
-                const z = event.alpha; // rotation degrees from 0 to 360
-        
-                const holographicElement = document.getElementById("holographic");
-                holographicElement.style.backgroundPosition =
-                  Math.min(Math.abs(z), 100) + "%";
-        }
-        
-          </script>
-        
-          <script>
-        
-        const holographicElement = document.getElementById("holographic");
-        
-        function updateHolographicBackground(value) {
-          const percentage = value * 100;
-          holographicElement.style.backgroundPosition = percentage + "%";
-        }
-        
-        function handleMouseMove(event) {
-          const x = event.clientX;
-          const width = document.documentElement.clientWidth;
-          const value = x / width;
-          updateHolographicBackground(value);
-        }
-        
-        function handleDeviceOrientation(event) {
-          const z = Math.abs(event.alpha); // rotation degrees from 0 to 360
-          const value = z / 360;
-          updateHolographicBackground(value);
-        }
-        
-        window.addEventListener("deviceorientation", handleDeviceOrientation, true);
-        
-          </script>
+       
+       const holographicElement = document.getElementById("holographic");
+
+function updateHolographicBackground(value) {
+  const percentage = value * 100;
+  holographicElement.style.backgroundPosition = percentage + "%";
+}
+
+function handleMouseMove(event) {
+  const x = event.clientX;
+  const width = document.documentElement.clientWidth;
+  const value = x / width;
+  updateHolographicBackground(value);
+}
+
+function handleDeviceOrientation(event) {
+  const z = Math.abs(event.alpha); // rotation degrees from 0 to 360
+  const value = z / 360;
+  updateHolographicBackground(value);
+}
+
+window.addEventListener("deviceorientation", handleDeviceOrientation, true); </script>
 
   
 <!-- original scripts with the bootstarp navbar page -->
