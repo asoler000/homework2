@@ -7,7 +7,7 @@
     <meta name="author" content="Adriana Soler">
     <meta name="generator" content="Jekyll v4.1.1">
     <meta property="og:title" content="Adriana Soler">
-<meta property="og:image" content="./assets/dist/images/water.png">
+<meta property="og:image" content=".assets/dist/images/water.png">
 <meta property="og:description" content="Adriana Soler | Developer | Art Director | Developer">
 <meta property="og:url" content="https://asoler000.github.io/homework2/">
 
@@ -16,9 +16,8 @@
 <!-- <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbars/">  -->
  <!-- <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/grid/">  -->
 
-
     <!-- Bootstrap core CSS -->
-<!-- <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+<!-- <link href="./dist/css/bootstrap.min.css" rel="stylesheet"> -->
 
     <style>
       .bd-placeholder-img {
@@ -29,30 +28,18 @@
         -ms-user-select: none;
         user-select: none;
       }
-      .form-group {
-    margin: 1rem;
-}
-.panel{
-  padding-bottom:2em;
-}
 
- 
-#holographic {
+      .row { padding: 2rem 0 2rem 0;
+      }
+ figcaption {
+   margin : 0 10% 0 10%;
 
-     background-image: linear-gradient(
-     to right, 
-rgb(194, 255, 182),
-rgb(255, 163, 182),
-rgb(221, 169, 255),
-rgb(162, 209, 255)
-);
-background-size: 200%;
-}
+ }
 
-.holographic {
+ .holographic {
 
 background-image: linear-gradient(
-to right, 
+to right,
 rgb(194, 255, 182),
 rgb(255, 163, 182),
 rgb(221, 169, 255),
@@ -60,6 +47,18 @@ rgb(162, 209, 255)
 );
 background-size: 200%;
 }
+      #holographic {
+
+background-image: linear-gradient(
+to right,
+rgb(194, 255, 182),
+rgb(255, 163, 182),
+rgb(221, 169, 255),
+rgb(162, 209, 255)
+);
+background-size: 200%;
+}
+
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -71,31 +70,30 @@ background-size: 200%;
   </head>
   <body>
   
-
+<!-- this is the menu -->
     <nav class="navbar navbar-dark bg-dark" id="holographic" onmousemove="handleMouseMove(event)">
-      <a class="navbar-brand" href="index.html"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarsExample03">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="About.html">About<span class="sr-only"></span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="Contact.html">Contact <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Portfolio.html">Portfolio<span class="sr-only"></span></a>
-          </li>
-        </ul>
-        </div>
-    </nav>
+  <a class="navbar-brand" href="index.html"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
+  <div class="collapse navbar-collapse" id="navbarsExample03">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="About.html">About<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="Contact.html">Contact <span class="sr-only">current</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Portfolio.html">Portfolio<span class="sr-only"></span></a>
+      </li>
+    </ul>
+    </div>
+</nav>
 
 <!-- Form Started -->
 <div class="container themed-container">
